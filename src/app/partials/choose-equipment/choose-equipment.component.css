@@ -1,0 +1,34 @@
+@import '../../../styles.css';
+
+.s-choose-equipment {
+    width: 380px;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 0 16px 24px 0 rgba(38, 49, 54, 0.16);
+    margin: 1% auto;
+    padding: 25px 40px;
+}
+.s-choose-equipment div:first-child {
+    height: 20%;
+    margin-bottom: 30px;
+}
+.s-choose-equipment div:last-child div {
+    margin-top: 25px;
+    line-height: 5px;
+}
+.logo-autobot {
+    display: block;
+    width: 90px;
+    height: auto;
+    margin: 0 auto;
+}
+.form-choose-field {
+    height: 50px;
+    margin-bottom: 20px;
+}
+.form-choose-field:last-of-type {
+    margin-bottom: 5px;
+}
+.btn-choose-equipment {
+    float: right;
+}

@@ -1,0 +1,36 @@
+<section class="s-choose-equipment" [style.display]="display ? 'block' : 'none'" >
+  <div>
+    <img src="../../../assets/resources/img/autobot-id-visual.png" alt="Logo autobot" class="logo-autobot">
+    <mat-form-field class="sel-choose-equipment">
+      <select [(ngModel)]="equipament" matNativeControl required>
+        <option value="vap">VAP 4641</option>
+        <option value="net">NET 3P</option>
+      </select>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <form action="" class="form-choose-equipment" #formChooseEquipment>
+      <mat-form-field class="form-choose-field">
+        <input matInput placeholder="SSID 2.4GHz Name" (focus)="onFocusEmptyField('ssidName')" [formControl]="ssidName" name="ssidName" class="inpt-field-element">
+        <mat-error *ngIf="ssidName.invalid">{{ getSsidNameErrorMessage() }}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-choose-field">
+        <input matInput placeholder="SSID 2.4GHz Password" (focus)="onFocusEmptyField('ssidPassword')" [formControl]='ssidPassword' name="ssidPassword" class="inpt-field-element">
+        <mat-error *ngIf="ssidPassword.invalid">{{ getSsidPasswordErrorMessage() }}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-choose-field">
+        <input matInput placeholder="SSID 5.0GHz Name" (focus)="onFocusEmptyField('ssid50Name')" [formControl]="ssid50Name" name="ssid50Name" class="inpt-field-element">
+        <mat-error *ngIf="ssid50Name.invalid">{{ getSsid50NameErrorMessage() }}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-choose-field">
+        <input matInput placeholder="SSID 5.0GHz Password" (focus)="onFocusEmptyField('ssid50Password')" [formControl]="ssid50Password" name="ssid50Password" class="inpt-field-element">
+        <mat-error *ngIf="ssid50Password.invalid">{{ getSsid50PasswordErrorMessage() }}</mat-error>
+      </mat-form-field>
+      <div>
+        <button (click)="onClickEmitCancelAction(false)" type="button" class="btn-cancel" mat-raised-button>Cancel</button>
+        <button (click)="onClickEmitNoticeChoosedEquipment(false)" type="button" class="btn-choose-equipment" mat-raised-button color="primary">OK</button>
+      </div>
+    </form>
+  </div>
+</section>

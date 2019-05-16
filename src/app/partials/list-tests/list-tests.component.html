@@ -1,0 +1,20 @@
+<section class="s-ui">
+  <div class="title-tests">
+      <section class="all-items">
+          <mat-checkbox (change)="checkAllItems()" [formControl]="flagAllItems" class="chbox-all">{{ title }}</mat-checkbox>
+      </section>
+  </div>
+  <div class="lst-tests" #lstTests>
+    <form action="" [formGroup]="form">
+      <section class="each-item" formArrayName="tests" *ngFor="let item of form['controls'].tests['controls']; let i = index">
+        <mat-checkbox (change)="checkSelectedItem()" class="chbox-item" [formControlName]="i">{{ tests[i].name }}</mat-checkbox>
+      </section>
+    </form>
+    
+  </div>
+  <div class="ctrl-tests">
+      <button [disabled]="flagAddTests === 0" (click)="openDialog()" type="button" class="btn-add-tests" mat-raised-button color="primary">Add Tests</button>
+      <button (click)="onCancel()" type="button" class="btn-cancel" mat-raised-button>Cancel</button>
+  </div>
+</section>
+<ngx-spinner></ngx-spinner>

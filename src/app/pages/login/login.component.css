@@ -1,0 +1,42 @@
+@import '../../../styles.css';
+
+.s-login {
+    background-image: url('../../../assets/resources/img/background-login.png');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+}
+.modal-login {
+    position: relative;
+    top: 12%;
+    background-color: #fff;
+    border-radius: 16px;
+    width: 390px;
+    height: 430px; 
+    margin: 0 auto;
+    box-shadow: 0 16px 24px 0 rgba(38, 49, 54, 0.16);
+    padding: 40px 60px;
+}
+.modal-login div:first-child {
+    margin-bottom: 20px;
+}
+.logo-autobot {
+    width: 120px;
+    height: auto;
+    margin-bottom: 30px;
+}
+.inpt-field-element {
+    font-size: 80%;
+}
+.mat-form-field-label-wrapper label {
+    font-size: 14px !important;
+}
+.forgot-pass {
+    float: left;
+    margin-top: 10px;
+}
+button {
+    float: right;
+    margin-top: 10px;
+}

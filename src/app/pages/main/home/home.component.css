@@ -1,0 +1,20 @@
+@import '../../../../styles.css';
+
+main {
+    height: 100vh;
+}
+.s-content {
+    position: relative;
+    top: 20%;
+}
+.logo-autobot {
+    margin-bottom: 20px;
+}
+.logo-autobot img {
+    width: 120px;
+}
+.phrase {
+    font-size: 65%;
+    line-height: 145%;
+    margin-bottom: 30px;
+}

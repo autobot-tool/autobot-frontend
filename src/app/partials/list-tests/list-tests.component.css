@@ -1,0 +1,40 @@
+@import '../../../styles.css';
+
+.s-ui {
+    height: 100vh;
+    background-color: transparent;
+}
+.title-tests {
+    height: 20%;
+    margin-bottom: 20px;
+    padding: 0 40px;
+}
+.all-items {
+    float: left;
+    margin-top: 80px;
+    padding: 0 10px;
+}
+.lst-tests {
+    padding: 0 40px;
+    height: 50%;
+    margin-bottom: 15px;
+    overflow-y: auto;
+}
+.each-item {
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 10px 10px;
+    background-color: #fff;
+    border: solid 1px #b0b8c5;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.ctrl-tests {
+    float: left;
+    padding: 0 40px;
+}
+.btn-cancel {
+    position: relative;
+    left: 20px;
+}

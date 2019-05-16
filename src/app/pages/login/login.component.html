@@ -1,0 +1,24 @@
+<section class="s-login">
+  <div class="modal-login">
+    <div>
+      <img src="../../../assets/resources/img/autobot-id-visual.png" alt="Autobot logo" class="logo-autobot">
+      <h3>Welcome to Autobot</h3>
+    </div>
+    <div>
+      <form class="form-login">
+        <mat-form-field class="form-login-field">
+          <input [formControl]="username" matInput placeholder="Username" name="username" class="inpt-field-element" (keyup.enter)="makeLogin()">
+          <mat-error *ngIf="username.invalid">{{ getErrorMessage() }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-login-field">
+          <input [formControl]="password" matInput type="password" placeholder="Password" name="password" (keyup.enter)="makeLogin()">
+          <mat-error *ngIf="password.invalid">{{ getErrorMessage() }}</mat-error>
+        </mat-form-field>
+      </form>
+    </div>
+    <div>
+      <!-- <a href="#" class="forgot-pass">Forgot password?</a> -->
+      <button (click)="makeLogin()" mat-raised-button color="primary">Login</button>
+    </div>
+  </div>
+</section>

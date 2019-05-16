@@ -1,0 +1,59 @@
+<section class="s-main">
+  <aside class="">
+    <figure>
+      <a [routerLink]="['']">
+        <img src="../../../assets/resources/img/autobot-icon.svg" alt="Autobot icon" class="icon-autobot">
+      </a>
+    </figure>
+    
+    <ul class="main-nav" #mainNav>
+      <li [style.display]="dutSelected() ? 'block' : 'none'">
+        <a [routerLink]="['ui']">
+          <img (mouseover)="onMouseOverActiveIcon('ui-icon.svg', 'active-ui-icon.svg')"
+                (mouseout)="onMouseOutDisableActiveIcon('ui-icon.svg', 'active-ui-icon.svg')" src="../../../assets/resources/img/ui-icon.svg" alt="UI icon" class="no-active">
+        </a>
+      </li>
+      <li [style.display]="dutSelected() ? 'block' : 'none'">
+        <a>
+          <img (mouseover)="onMouseOverActiveIcon('dhcp-icon.svg', 'active-dhcp-icon.svg')"
+               (mouseout)="onMouseOutDisableActiveIcon('dhcp-icon.svg', 'active-dhcp-icon.svg')" src="../../../assets/resources/img/dhcp-icon.svg" alt="DHCP icon">
+        </a>
+      </li>
+      <li [style.display]="dutSelectedBoth() ? 'block' : 'none'">
+        <a [routerLink]="['wifi24']">
+            <img (mouseover)="onMouseOverActiveIcon('wifi-2.4-icon.svg', 'active-wifi-2.4-icon.svg')"
+            (mouseout)="onMouseOutDisableActiveIcon('wifi-2.4-icon.svg', 'active-wifi-2.4-icon.svg')" src="../../../assets/resources/img/wifi-2.4-icon.svg" alt="Wifi 2.4GHz icon">
+        </a>
+      </li>
+      <li [style.display]="dutSelectedBoth() ? 'block' : 'none'">
+        <a [routerLink]="['wifi5']">
+            <img (mouseover)="onMouseOverActiveIcon('wifi-5.0-icon.svg', 'active-wifi-5.0-icon.svg')"
+                 (mouseout)="onMouseOutDisableActiveIcon('wifi-5.0-icon.svg', 'active-wifi-5.0-icon.svg')" src="../../../assets/resources/img/wifi-5.0-icon.svg" alt="Wifi 5.0GHz icon">
+        </a>
+      </li>
+      <li [style.display]="dutSelected() ? 'block' : 'none'">
+        <a>
+            <img (mouseover)="onMouseOverActiveIcon('ipv6-icon.svg', 'active-ipv6-icon.svg')"
+                 (mouseout)="onMouseOutDisableActiveIcon('ipv6-icon.svg', 'active-ipv6-icon.svg')" src="../../../assets/resources/img/ipv6-icon.svg" alt="IPV6 icon">
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <header>
+    <a (click)="onClickActiveChooseEvent()" class="btn btn-ghost" *ngIf="!isChoosedEquipmentEmpty">{{ choosedDUT() }}<img src="../../../assets/resources/img/switch-equipment-icon.svg" alt=""></a>
+    
+    <div class="user">
+      <img src="../../../assets/resources/img/user.svg" alt="Login photo">
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button (click)="makeSignup()" mat-menu-item>Sign up</button>
+        <button (click)="makeLogout()" mat-menu-item>Logout</button>
+      </mat-menu>
+    </div>
+  </header>
+  <main>
+    <div class="m-tests">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</section>

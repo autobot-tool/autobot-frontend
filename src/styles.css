@@ -1,0 +1,139 @@
+/* You can add global styles to this file, and also import other style files */
+
+/** IMPORTS */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import 'assets/vendors/css/normalize.css';
+@import 'assets/vendors/css/grid.css';
+
+/** BASIC STYLES */
+/* ------------- FONTS */
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/vendors/Fonts/roboto/Roboto-Regular.ttf');
+}
+/* ------------- GENERAL THINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    color: #37404f;
+}
+/* ------------- HEADINGS */
+h3 {
+    font-size: 90%;
+    font-weight: bold;
+}
+/* ------------- MATERIAL DESIGN CUSTOMS */
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    font-size: 60%;
+    line-height: 40px;
+    font-weight: 400;
+}
+.mat-raised-button.mat-primary {
+    display: inline-block;
+    background-color: #2979ff;
+    padding: 10px;
+    /* width: 104px; */
+}
+.mat-button-wrapper {
+    color: #fff;
+    font-weight: 400;
+    font-size: 110%;
+}
+.btn-cancel.mat-raised-button {
+    display: inline-block;
+    padding: 10px;
+}
+.btn-cancel.mat-raised-button .mat-button-wrapper {
+    color: #2979ff;
+}
+.sel-choose-equipment .mat-form-field-infix {
+    width: 128px;
+    /* border-radius: 4px;
+    border: solid 1px #b0b8c5; */
+    margin-top: 10px;
+    color: #2979ff;
+    font-size: 80%;
+}
+.sel-choose-equipment .mat-form-field-wrapper .mat-form-field-underline {
+    height: 0;
+}
+mat-error {
+    font-size: 40%;
+}
+.chbox-all .mat-checkbox-layout .mat-checkbox-label {
+    font-size: 150%;
+    font-weight: bold;
+}
+.user .mat-button-wrapper {
+    color: #37404f;
+}
+/* ------------- LINKS */
+a:link,
+a:visited {
+    text-decoration: none;
+    font-size: 55%;
+    display: inline-block;
+    padding: 8px 0;
+    font-weight: bold;
+    color: #738198;
+    transition: color 0.2s;
+}
+a:hover,
+a:active {
+    color: #8793a6;
+}
+/* ------------- FORM ELEMENTS */
+.form-login-field,
+.form-choose-field {
+    width: 100%;
+    height: 70px;
+}
+/* ------------- BUTTONS */
+.btn-cancel {
+    position: relative;
+    left: 5%;
+}
+
+/** ------------------------------ QUERIES ------------------------------ */
+@media only screen and (max-width: 1200px) {
+
+}
+@media only screen and (max-width: 1023px) {
+    
+}
+@media only screen and (max-width: 767px) {
+    /* Main screen */
+    header {
+        width: 100% !important;
+        height: 3.2em !important;
+        float: right;
+        padding: 0 10px !important;
+    }
+    aside { display: none; }
+    main { width: 100% !important; }
+    /* Home screen */
+    .logo-autobot { margin: 10px auto; }
+    .logo-autobot img { width: 95px !important; }
+}
+@media only screen and (max-width: 480px) {
+    /* Login screen */
+    .modal-login {
+        width: 345px !important;
+        height: 400px !important; 
+        padding: 30px 40px !important;
+    }
+    .logo-autobot { 
+        width: 90px !important; 
+        margin-bottom: 10px !important;
+    }
+    h3 { font-size: 70%; }
+    .s-login {
+        min-width: 360px !important;
+        background-size: auto !important;
+    }
+}

@@ -1,0 +1,28 @@
+<section class="signup-user">
+  <div>
+    <img src="../../../assets/resources/img/autobot-id-visual.png" alt="Logo autobot" class="logo-autobot">
+  </div>
+
+  <div>
+    <form class="example-form">
+      <mat-form-field class="username-input">
+        <input matInput placeholder="Username" [formControl]="userName">
+      </mat-form-field>
+      <mat-form-field class="username-input">
+        <input matInput placeholder="E-mail" [formControl]="userEmail">
+      </mat-form-field>
+      <mat-form-field class="username-input">
+        <input type="password" matInput placeholder="Password" [formControl]="userPassword">
+      </mat-form-field>
+      <mat-form-field class="username-input">
+        <input type="password" matInput placeholder="Confirm Password" [formControl]="userPasswordConfirm">
+      </mat-form-field>
+    </form>
+  </div>
+
+  <div>
+    <button (click)="onClickEmitCancelAction()" type="button" class="btn-cancel" mat-raised-button>Cancel</button>
+    <button (click)="onClickEmitNoticeRegister()" type="button" class="btn-register" mat-raised-button
+      color="primary">Register</button>
+  </div>
+</section>

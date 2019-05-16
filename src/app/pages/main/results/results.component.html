@@ -1,0 +1,19 @@
+<section class="s-results">
+  <div class="title">
+    <h2>Test Results</h2>
+  </div>
+  <div class="lst-results">
+    <section class="lst-item-header">
+      <ul>
+        <li>Duration</li><li>Outcome</li><li>Name</li><li>Suite</li><li>Dut</li>
+      </ul>
+
+      <ul [style.background-color]="item?.outcome === 'Failed' ? '#ffd7de' : '#fff'"
+          [style.border-color]="item?.outcome === 'Failed' ? '#ff3d63' : '#b0b8c5'" 
+          *ngFor="let item of results" class="each-item-result" >
+        <li>{{ item?.duration.toFixed(2) }}s</li><li>{{ item?.outcome }}</li><li>{{ item?.name }}</li><li>{{ formatSuiteName(item?.suite) }}</li><li>{{ formatDUTName(item?.dut) }}</li>
+      </ul>
+    </section>
+  </div>
+  <!-- <button mat-button class="btn-download">Download</button> -->
+</section>
